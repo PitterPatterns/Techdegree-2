@@ -39,11 +39,12 @@ var numOfItem = 10;
 ***/
 
 const showPage = (list, page) => {
+   var strt = (page * numOfItem) - numOfItem;
+   var eend = page * numOfItem;
    for (i = 0; i < list.length; i++) {
-      if (list[i] >= 0) {
-         return page;
-      } else if (list[i] <= numOfItem) {
-         return page;
+      if (i >= strt && i <= eend) {
+         
+      }
       }
    }
 
