@@ -63,11 +63,13 @@ const showPage = (list, page) => {
 const appendPageLinks = (list) => {
 
    /* This will taget the div element on the 'example-meets.html' page???? */
-   const page = documet.querySelector('div.page')
+   
 
 
-   /* This will create the div element, but it wont be shown yet */
-   let div = document.createElement('div');
+   /* This will create a div element, and append it to the div element with the class name of page */
+   let ul = document.getElementsByTagName('div.page')
+   let div = document.createElement('div.pagination');
+   ul.appendChild(div);
 
 
   /* This willl call the showPage function when clicked */
