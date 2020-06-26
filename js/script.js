@@ -40,11 +40,13 @@ var numOfItem = 10;
        "invoke" the function 
 ***/
 
+/*This function will take any list and page# and hide all but 10. */
+
 const showPage = (list, page) => {
    var strt = (page * numOfItem) - numOfItem;
    var eend = page * numOfItem;
    for (i = 0; i < list.length; i++) {
-      if (i >= strt && i <= eend) {
+      if (i >= strt && i < eend) {
          list[i].style.diplay = 'block';
       } else {
          list[i].style.display = 'none';
@@ -58,7 +60,21 @@ const showPage = (list, page) => {
    functionality to the pagination buttons.
 ***/
 
+const appendPageLinks = (list) => {
 
+   /* This will taget the div element on the 'example-meets.html' page???? */
+   const page = documet.querySelector('div.page')
+
+
+   /* This will create the div element, but it wont be shown yet */
+   let div = document.createElement('div');
+
+
+  /* This willl call the showPage function when clicked */
+  a.addEventListener('click', () => {})
+
+   
+}
 
 
 
