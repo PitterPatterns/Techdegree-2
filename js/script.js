@@ -69,7 +69,12 @@ const appendPageLinks = (list) => {
       page.appendChild(div);
    /* This will store the pagination links  */
    let unOrd = document.createElement('ul');
-   div.appendChild(unOrd);
+      div.appendChild(unOrd);
+
+      /*Fuction*/
+   function calculate() {
+      let 
+   }
 
    /*this wiil loop over/add 'li' & 'a' tags */
    for (n = 0; n < list.length/10; n++) {
