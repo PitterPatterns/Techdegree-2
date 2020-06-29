@@ -73,6 +73,9 @@ const appendPageLinks = (list) => {
 
    /*this wiil loop over/add 'li' & 'a' tags */
    for (n = 0; n < list.length; n++) {
+      let li = document.createElement('li');
+      let a = document.createElement('a');
+      
       
    }
    
