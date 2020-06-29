@@ -63,19 +63,19 @@ const showPage = (list, page) => {
 const appendPageLinks = (list) => {
 
    /* This will create a div element, give it a className of pagination, as well as append it to the div element with the class name of page */
-   let ul = document.querySelector('div.page');
+   let page = document.querySelector('.page');
    let div = document.createElement('div');
    div.className = 'pagination';
-   ul.appendChild(div);
+   page.appendChild(div);
    /* This will store the pagination links  */
    let unOrd = document.createElement('ul');
    div.appendChild(ul);
 
    /*this wiil loop over/add 'li' & 'a' tags */
-   for (n = 0; n < list.length; n++) {
+   for (n = 0; n < list.length/10; n++) {
       let li = document.createElement('li');
       let a = document.createElement('a');
-      
+
       
    }
    
