@@ -53,12 +53,11 @@ const appendPageLinks = (list) => {
 
 
    /* 4. this wiil loop over/add 'li' & 'a' tags....as well as set the value to the href, text, and class */
-   for (n = 0; n < totNum; n++) {
+   for (let n = 0; n < totNum; n++) {
       const li = document.createElement('li');
       const a = document.createElement('a');
          unOrd.appendChild(li);
          li.appendChild(a);
-      };
          a.href = '#'
          a.textContent = n + 1;
          if (n === 0) { 
@@ -69,14 +68,15 @@ const appendPageLinks = (list) => {
          
    /* This will add a "click" EventListener to every "a" element and call the showPage function when clicked */ 
          a.addEventListener('click', (e) => {
-            for (i = 0; i < a.length; i++) {
-               e. target.classList.remove('active');
-            }
+            if (n > 0) {
+               e. target.classList.remove('active')
+            } else {
                e.target.className = "active";
-
                showPage(list, e.target.textContent);
-                                             })
-      }
+            };
+         })
+   }
+}
    
   
   
