@@ -67,12 +67,12 @@ const appendPageLinks = (list) => {
       
          
    /* This will add a "click" EventListener to every "a" element and call the showPage function when clicked */ 
-         a.addEventListener('click', (e) => {
+         a.addEventListener('click', (event) => {
             if (n > 0) {
-               e. target.classList.remove('active')
+               event.target.classList.remove('active')
             } else {
-               e.target.className = "active";
-               showPage(list, e.target.textContent);
+               event.target.className = "active";
+               showPage(list, event.target.textContent);
             };
          });
    
