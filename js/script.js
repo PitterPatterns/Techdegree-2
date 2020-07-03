@@ -60,24 +60,24 @@ const appendPageLinks = (list) => {
          li.appendChild(a);
          a.href = '#'
          a.textContent = n + 1;
-         if (n === 0) { 
-            a.className = "active";
-      };
-   }   
-      
+   
+   
          
    /* This will add a "click" EventListener to every "a" element and call the showPage function when clicked */ 
+      
          a.addEventListener('click', (event) => {
-            if (n > 0) {
-               event.target.classList.remove('active')
-            } else {
-               event.target.className = "active";
+            for (i = 0; i < div.length; i++) {
+               if (i >= 0) {
+                  event.target.className = 'active';
+               }
                showPage(list, event.target.textContent);
             };
-         });
+         })
+      
+      }
    
+
 }
-   
 appendPageLinks(studL);
   
   
