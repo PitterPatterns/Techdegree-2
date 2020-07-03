@@ -22,12 +22,12 @@ const showPage = (list, page) => {
    var eend = page * numOfItem;
    for (i = 0; i < list.length; i++) {
       if (i >= strt && i < eend) {
-         list[i].style.diplay = 'block';
-      } else {
-         list[i].style.display = 'none';
-      }
+            list[i].style.display = 'block';  
+         } else { 
+            list[i].style.display = 'none';
+         }
    }
-};
+}
 showPage(studL, 1);
 
 /*** 
@@ -63,7 +63,7 @@ const appendPageLinks = (list) => {
          if (n === 0) {
             a.className = 'active';
          }
-   
+   };
    
          
    /* This will add a "click" EventListener to every "a" element and call the showPage function when clicked */ 
@@ -79,7 +79,7 @@ const appendPageLinks = (list) => {
                   showPage(list, event.target.textContent);
             }
          });
-   }
+   
    
 }
 
